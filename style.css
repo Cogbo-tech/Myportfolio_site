@@ -89,6 +89,7 @@ i {
     transition: transform 0.5s ease-in;
     display: none;
     margin-left: unset;
+    z-index: 10;
   }
   .nav-links li {
     text-align: center;
@@ -235,6 +236,7 @@ i {
   }
   .first .btn a {
     margin-top: 10px;
+    font-size: 12px;
   }
   .second {
     margin-top: 5%;
@@ -334,12 +336,12 @@ i {
 }
 @media screen and (max-width: 660px) {
   .skillset {
-    grid-template-columns: repeat(1, 0.7fr);
-    /* grid-auto-rows: 350px; */
+    grid-template-columns: repeat(1, 0.9fr);
+    grid-auto-rows: 270px;
     justify-content: center;
   }
   .skiset {
-    /* min-width: 350px; */
+    min-width: 270px;
   }
   .skiset:nth-child(3) {
     position: unset;
