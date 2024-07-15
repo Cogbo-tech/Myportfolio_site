@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   /* color: white; */
 }
 section,
@@ -147,7 +149,7 @@ i {
 }
 
 .first h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin-top: 10px;
 }
 .first h1 > span {
@@ -268,18 +270,20 @@ i {
   color: white;
 }
 .skiset {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   min-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  color: white;
+  box-shadow: 1px 2px 2px 1px whitesmoke;
   /* color: white; */
 }
 .skiset img {
   width: 100px;
   height: 100px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 .skiset h2 {
   margin-top: 50px;
@@ -289,16 +293,17 @@ i {
   /* color: white; */
 }
 .skiset p {
-  font-weight: lighter;
-  margin-top: 15px;
+  color: white;
+  margin-top: 10px;
   text-align: center;
+  font-size: 12px;
   /* color: white; */
 }
-.skiset:hover {
+/* .skiset:hover {
   background-color: white;
   color: rgb(9, 9, 48);
   transition: all 1.2s ease-in;
-}
+} */
 #skills a {
   width: 120px;
   height: 40px;
