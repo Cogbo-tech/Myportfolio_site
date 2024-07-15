@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  /* color: white; */
+}
+section,
+header,
+footer,
+nav {
+  max-width: 100%;
+}
+/* styling navigation menu */
+
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(9, 9, 48);
+  box-shadow: 0 0 20px 0 white;
+}
+
+i {
+  color: white;
+  font-size: 1.5rem;
+  font-family: cursive;
+  font-style: normal;
+}
+.nav-links {
+  width: 50%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 15%;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+}
+.nav-links li a:hover {
+  background-color: white;
+  color: slateblue;
+  padding: 8px;
+  transition: 0.5s all;
+  border-radius: 10px;
+}
+.burger {
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .nav-links {
+    width: 60%;
+  }
+  i {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    /* overflow: hidden;? */
+  }
+  .nav-links {
+    position: absolute;
+    height: 70vh;
+    top: 12vh;
+    background-color: rgb(9, 9, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid pink; */
+    /* border-top: 1px solid pink; */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    display: none;
+    margin-left: unset;
+  }
+  .nav-links li {
+    text-align: center;
+    /* border: 1px solid pink; */
+    /* margin-right: 50px; */
+  }
+
+  nav span {
+    display: none;
+  }
+  .burger {
+    margin-left: 40px;
+  }
+
+  .burger div {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+  display: flex;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* end of the styling for the navigation menu */
+
+/* styling the main section */
+.hero {
+  padding: 20px 20px;
+  display: flex;
+  /* z-index: 0; */
+  /* align-items: center; */
+  /* background-color: #dddd; */
+}
+.heromain {
+  border: 1px solid white;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* align-items: center; */
+}
+
+.first {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.first h1 {
+  font-size: 3.5rem;
+  margin-top: 10px;
+}
+.first h1 > span {
+  color: orangered;
+}
+.first .btn {
+  margin-top: 5%;
+  margin-left: 2%;
+}
+.first a {
+  width: 120px;
+  height: 35px;
+  text-decoration: none;
+  background-color: orangered;
+  color: rgb(9, 9, 48);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+}
+.first a:hover {
+  background-image: white;
+  color: black;
+}
+.second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second .myimage {
+  max-width: 60%;
+  /* border: 1px solid white; */
+  /* outline-style: dashed; */
+  /* outline-color: orangered; */
+  max-height: 90%;
+  border-radius: 50%;
+  z-index: 2;
+}
+.myimage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: orangered;
+  z-index: 11;
+}
+/* sreen design for 990px for hero section */
+
+@media screen and (max-width: 990px) {
+  .first h1 {
+    font-size: 2rem;
+  }
+  .second .myimage {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .heromain {
+    width: 100%;
+    padding: 0px 10px;
+    align-items: center;
+  }
+  .first {
+    margin-left: unset;
+  }
+  .first h2 {
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .first h1 {
+    font-size: 1.5rem;
+  }
+  .first .btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .first .btn a {
+    margin-top: 10px;
+  }
+  .second {
+    margin-top: 5%;
+  }
+  .second .myimage {
+    height: 100%;
+    width: 100%;
+    border-radius: none;
+  }
+}
+
+/* styling the skill page */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(9, 9, 48);
+  color: white;
+  padding: 20px;
+}
+#skills h1 {
+  font-size: 2rem;
+}
+/* styling skiill images */
+.skillset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: 250px;
+  padding: 10px;
+  background-color: rgb(9, 9, 48);
+  color: white;
+}
+.skiset {
+  border: 1px solid white;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  /* color: white; */
+}
+.skiset img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+}
+.skiset h2 {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  /* color: white; */
+}
+.skiset p {
+  font-weight: lighter;
+  margin-top: 15px;
+  text-align: center;
+  /* color: white; */
+}
+.skiset:hover {
+  background-color: white;
+  color: rgb(9, 9, 48);
+  transition: all 1.2s ease-in;
+}
+#skills a {
+  width: 120px;
+  height: 40px;
+  text-decoration: none;
+  background-color: orangered;
+  color: rgb(9, 9, 48);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 990px) {
+  .skillset {
+    padding: 10px 0px;
+    grid-template-columns: repeat(2, 0.8fr);
+    /* grid-auto-rows: 350px; */
+  }
+  .skiset {
+    /* min-width: 350px; */
+  }
+  .skiset:nth-child(3) {
+    position: relative;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .skillset {
+    grid-template-columns: repeat(1, 0.7fr);
+    /* grid-auto-rows: 350px; */
+    justify-content: center;
+  }
+  .skiset {
+    /* min-width: 350px; */
+  }
+  .skiset:nth-child(3) {
+    position: unset;
+    left: unset;
+  }
+  #skills h1 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+/* .....styling about page */
+#about {
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  /* align-items: center; */
+}
+.aboutpage {
+  width: 50%;
+  /* align-items: center; */
+}
+.picture img {
+  width: 70%;
+  padding: 10px 50px;
+}
+.write {
+  /* margin-right: 20%; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* left: -15%; */
+  gap: 10px;
+}
+.write h4 {
+  color: orangered;
+}
+.write h1 {
+  font-size: 2rem;
+}
+.me {
+  display: flex;
+  flex-direction: column;
+  color: rgb(9, 9, 48);
+  gap: 10px;
+  width: 300px;
+  /* height: 100px; */
+  background-color: rgb(240, 190, 172);
+  border-radius: 10px;
+  padding: 15px;
+}
+.me h4,
+p {
+  color: rgb(9, 9, 48);
+}
+.me p {
+  font-size: 12px;
+  opacity: 0.8;
+}
+@media screen and (max-width: 990px) {
+  .picture img {
+    width: 100%;
+  }
+  .write {
+    left: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .aboutpage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .picture img {
+    width: 70%;
+    position: relative;
+    left: 15%;
+  }
+  .write h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .me {
+    width: 250px;
+  }
+}
+
+/* styling the footer */
+#footer {
+  max-width: 100%;
+  padding: 15px;
+  display: flex;
+  background-color: rgb(9, 9, 48);
+  color: white;
+}
+.foot {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.foot h2 {
+  text-align: left;
+  font-size: 2rem;
+}
+.foot ul {
+  display: flex;
+  margin-top: 5%;
+}
+.foot ul a {
+  margin-left: 5%;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.foot ul a:nth-child(1) {
+  margin-left: unset;
+}
+.form input,
+textarea {
+  width: 60%;
+}
+.form label {
+  margin-top: 2%;
+}
+.form input {
+  height: 30px;
+  border: none;
+  padding: 3px;
+}
+.form input:hover {
+  border: 1px solid orangered;
+}
+.form button {
+  width: 16%;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  background-color: orangered;
+  color: rgb(9, 9, 48);
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  left: 20%;
+}
+
+@media screen and (max-width: 660px) {
+  #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.foot {
+  width: 100%;
+  padding: 10px;
+}
+.foot h2 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.foot ul {
+  /* padding: 10px 50px; */
+  justify-content: center;
+}
+.foot input,
+textarea {
+  width: 100%;
+}
+.form button {
+  width: 50%;
+}
+
+/* footnote */
+.bot {
+  text-align: center;
+  font-size: 15px;
+}
